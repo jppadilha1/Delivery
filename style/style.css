@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 100px;
+    width: 100vw;
+    background-color: rgb(243, 16, 16);
+    margin: auto; /* Lembrar de por margem na hora de responsivar*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family:'Hepta Slab', Helvetica, Arial;
+    color: rgb(255, 255, 44);
+}
+
+.menu-openner {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 62px;
+    height: 40px;
+    border-radius: 6px;
+    background-color: #ccc;
+}
+
+.section--area {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.section--salgados {
+    display: none;
+}
+
+.models {
+    background-color: #ccc;
+    width: 290px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    gap: 8px;
+    border-radius: 12px;
+}
+
+.models-item--description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.models-item--price {
+    text-align: center;
+    margin-top: 8px;
+    width: 70px;
+    padding: 2px;
+    background-color: #666;
+    border-radius: 6px;
+}
+
+.models-item--add span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: black;
+    
+}
+
+.models-item--add a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.salgado--area {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 0.5s;
+    opacity: 0;
+    overflow-y: auto;
+}
+
+.salgado--area-window {
+    background-color: #ccc;
+    width: 900px;
+    height: 370px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 50px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 6px #ccc;
+}
+
+.salgado--area-info span {
+    font-family:'Hepta Slab', Helvetica, Arial;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.button-qt {
+    height: 20px;
+    width: 55px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+}
+
+.button-qt a {
+    text-decoration: none;
+    color: black;
+}
+
+.button-qt div {
+    padding-left: 6px;
+    border-left: 1px solid #333;
+    padding-right: 6px;
+    border-right: 1px solid #333;
+    display: flex;
+    align-items: center;
+}
+
+.salgado--area-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.add--salgado-area{
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+
+.close--salgado-area {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.close--salgado-area:hover {
+    color: #666;
+}
+
