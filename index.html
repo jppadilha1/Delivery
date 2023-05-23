@@ -13,41 +13,54 @@
         <h1>SAGUADIN DELIVERY</h1>
         <div class="menu-openner"><span>0</span>🛒</div>
     </header>
-    <div class="section--salgados">
-    <div class="models">
-        <div class="models-item--img">
-            <img src="" alt="" style="width: 200px; height: 150px;">
-        </div>
-        <div class="models-item--description">
-            <span><strong></strong></span>
-            <div class="models-item--price">
-                
-            </div>
-        </div>
-        <div class="models-item--add"><a href=""><span>+</span></a></div>
-    </div>
-    </div>
     <main>
-        <div class="section--area"></div>
-    </main>
-
-    <div class="salgado--area">
-        <div class="salgado--area-window">
-            <div class="salgado--area-img">
-                <img src="" alt="" style="width: 280px; height: 200px;">
+        <div class="section--salgados">
+        <div class="models">
+            <div class="models-item--img">
+                <img src="" alt="" style="width: 200px; height: 150px;border-radius: 20px;">
             </div>
-            <div class="salgado--area-info">
-                <span>Nome</span>
-                <p>Descriçãozinha bem maneira sobre o salgado do Saguadins Delivery</p>
-                <div class="button-qt"><a href="">-</a><div>1</div><a href="">+</a></div>
-                <div class="salgado--area-buttons">
-                    <button class="close--salgado-area">Voltar</button>
-                    <button class="add--salgado-area">Adicionar no Carrinho</button>
+            <div class="models-item--description">
+                <span><strong></strong></span>
+                <div class="models-item--price">
+                    
                 </div>
-                
+            </div>
+            <div class="models-item--add"><a href=""><span>+</span></a></div>
+        </div>
+        </div>
+        <div class="main-container">
+            <div class="section--area"></div>
+        </div>
+
+        <aside>
+            <div class="cart-container">
+                <div class="menu-cart">a</div>
+            </div>
+        </aside>
+
+        <div class="salgado--area">
+            <div class="salgado--area-window">
+                <div class="salgado--area-img">
+                    <img src="" alt="" style="width: 280px; height: 230px; border-radius: 20px;">
+                </div>
+                <div class="salgado--area-info">
+                    <span>Nome</span>
+                    <p>Descriçãozinha bem maneira sobre o salgado do Saguadins Delivery</p>
+                    <div class="salgado--area-qtprice">
+                        <div class="salgado--area-price">R$</div>
+                        <div class="button-qt">
+                            <a id="menos"href="">-</a><div>1</div><a id="mais" href="">+</a>
+                        </div>
+                    </div>
+                    <div class="salgado--area-buttons">
+                        <button class="add--salgado-area">Adicionar no Carrinho</button>
+                        <button class="close--salgado-area" onclick="closeWindowArea()">Voltar</button>
+                    </div>
+                    
+                </div>
             </div>
         </div>
-    </div>
+    <main>
     <script src="script/salgados.js"></script>
     <script src="script/script.js"></script>
 </body>

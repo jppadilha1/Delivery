@@ -7,6 +7,11 @@ body {
     padding: 0;
 }
 
+main {
+    display: flex;
+    gap: 100px;
+}
+
 header {
     height: 100px;
     width: 100vw;
@@ -119,9 +124,24 @@ header {
     font-weight: bold;
 }
 
+.salgado--area-qtprice {
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.salgado--area-price {
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 2px solid #000;
+    padding-bottom: 1px;
+}
+
 .button-qt {
     height: 20px;
-    width: 55px;
+    width: 60px;
     border-radius: 8px;
     display: flex;
     justify-content: space-around;
@@ -144,9 +164,10 @@ header {
 }
 
 .salgado--area-buttons {
+    width: 280px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top: 50px;
 }
 
@@ -168,4 +189,11 @@ header {
 .close--salgado-area:hover {
     color: #666;
 }
+
+
+aside {
+    width: 30vw;
+    background-color: #ccc;
+}
+
 
