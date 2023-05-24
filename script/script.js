@@ -1,7 +1,9 @@
 const s = (e) => document.querySelector(e);
 const sa = (e) => document.querySelectorAll(e);
 
-salgadoQT = 1;
+let salgadoQT = 1;
+let salgadoKey;
+let cart = [];
 
 salgadosJSON.map((item, index) => {
     let salgadoItem = s('.models').cloneNode(true);
@@ -15,6 +17,9 @@ salgadosJSON.map((item, index) => {
         s('.salgado--area-img img').src = item.img;
         s('.salgado--area-price').innerHTML = `R$ ${item.price.toFixed(2)}`;
         salgadoQT = 1;
+        s('.button-qt div').innerHTML = salgadoQT;
+
+        salgadoKey = item;
 
         s('.salgado--area').style.opacity = 0;
         s('.salgado--area').style.display = 'flex';
@@ -47,3 +52,17 @@ s('#mais').addEventListener('click', (e) => {
     salgadoQT++;
     s('.button-qt div').innerHTML = salgadoQT;
 })
+
+s('.add--salgado-item').addEventListener('click', () => {
+    let salgadoItems = s('.cart-items').cloneNode(true);
+    salgadoItems.querySelector('.cart-items img').src = salgadoKey.img;
+    salgadoItems.querySelector('.cart-item-name').innerHTML = salgadoKey.name;
+    salgadoItems.querySelector('.cart-items span').innerHTML = salgadoQT+' unidades';
+
+    s('.cart-items').append(salgadoItems);
+    console.log(salgadoKey)
+    console.log(salgadoQT)
+
+    s('aside').style.display = 'flex';
+    closeWindowArea();
+});

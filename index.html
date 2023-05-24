@@ -9,11 +9,30 @@
     <link href="https://fonts.googleapis.com/css?family=Hepta+Slab:400,700|Lato:400,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>SAGUADIN DELIVERY</h1>
-        <div class="menu-openner"><span>0</span>🛒</div>
-    </header>
+    <aside>
+        <div class="cart-container">
+            <div class="menu-cart">
+                <h2>Seus Salgados</h2>
+                <div class="cart-items">
+                        <img src="" alt="" style="width: 50px; height: 50px; border-radius: 12px;">
+                        <div class="cart-item-name"></div>
+                        <span></span>
+                </div><hr>
+                <div class="subtotal-items"><Strong>Subtotal</Strong> R$--</div><hr>
+                <div class="promotion-items">
+                    Desconto (-10%) - a partir de 100 unidades
+                    <span>R$ --</span>
+                </div><hr>
+                <div class="total-items"><strong>Total</strong> R$--</div><hr>
+                <div class="checkout"><input type="submit" value="Finalizar Compra"></div>
+            </div>
+        </div>
+    </aside>
     <main>
+        <header>
+            <h1>SAGUADIN DELIVERY</h1>
+            <div class="menu-openner"><span>0</span>🛒</div>
+        </header>
         <div class="section--salgados">
         <div class="models">
             <div class="models-item--img">
@@ -30,13 +49,7 @@
         </div>
         <div class="main-container">
             <div class="section--area"></div>
-        </div>
-
-        <aside>
-            <div class="cart-container">
-                <div class="menu-cart">a</div>
-            </div>
-        </aside>
+        </div> 
 
         <div class="salgado--area">
             <div class="salgado--area-window">
@@ -53,7 +66,7 @@
                         </div>
                     </div>
                     <div class="salgado--area-buttons">
-                        <button class="add--salgado-area">Adicionar no Carrinho</button>
+                        <button class="add--salgado-item">Adicionar no Carrinho</button>
                         <button class="close--salgado-area" onclick="closeWindowArea()">Voltar</button>
                     </div>
                     
