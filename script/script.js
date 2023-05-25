@@ -54,10 +54,15 @@ s('#mais').addEventListener('click', (e) => {
 })
 
 s('.add--salgado-item').addEventListener('click', () => {
-    let salgadoItems = s('.cart-items').cloneNode(true);
-    salgadoItems.querySelector('.cart-items img').src = salgadoKey.img;
+    cart.push({
+        salgadoKey,
+        salgadoQT
+    });
+    console.log(cart)
+    let salgadoItems = s('.cart-models-item').cloneNode(true);
+    salgadoItems.querySelector('.cart-models-item img').src = salgadoKey.img;
     salgadoItems.querySelector('.cart-item-name').innerHTML = salgadoKey.name;
-    salgadoItems.querySelector('.cart-items span').innerHTML = salgadoQT+' unidades';
+    salgadoItems.querySelector('.cart-models-item span').innerHTML = salgadoQT+' uni.';
 
     s('.cart-items').append(salgadoItems);
     console.log(salgadoKey)

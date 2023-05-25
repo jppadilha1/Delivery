@@ -205,14 +205,6 @@ aside {
     font-family:'Hepta Slab', Helvetica, Arial;
 }
 
-.cart-items {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    padding: 20px;
-}
-
 .subtotal-items, .promotion-items, .total-items {
     padding: 14px;
 }
@@ -232,6 +224,14 @@ aside {
     background-color: rgb(49, 125, 49);
     color: #fff;
     cursor: pointer;
+}
+
+.cart-models-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    min-width: 25vw;
 }
 
 
