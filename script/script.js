@@ -54,20 +54,39 @@ s('#mais').addEventListener('click', (e) => {
 })
 
 s('.add--salgado-item').addEventListener('click', () => {
-    cart.push({
-        salgadoKey,
-        salgadoQT
-    });
-    console.log(cart)
-    let salgadoItems = s('.cart-models-item').cloneNode(true);
-    salgadoItems.querySelector('.cart-models-item img').src = salgadoKey.img;
-    salgadoItems.querySelector('.cart-item-name').innerHTML = salgadoKey.name;
-    salgadoItems.querySelector('.cart-models-item span').innerHTML = salgadoQT+' uni.';
+    let identifier = salgadoKey.id;
+    let key = cart.findIndex((item) => item.identifier == identifier);
 
-    s('.cart-items').append(salgadoItems);
-    console.log(salgadoKey)
-    console.log(salgadoQT)
-
+    if(key > -1) {
+        cart[key].salgadoQT = cart[key].salgadoQT + salgadoQT;
+    } else {
+        cart.push({
+            salgadoKey,
+            salgadoQT,
+            identifier
+        });
+    };
+   
     s('aside').style.display = 'flex';
     closeWindowArea();
+    updateCartArea();
 });
+
+function updateCartArea() {
+    s('.cart-items').innerHTML = '';
+    let subtotal;
+    let desconto;
+    let total;
+
+    for(let i in cart){
+        let salgadoItems = s('.cart-models-item').cloneNode(true);
+        salgadoItems.querySelector('.cart-models-item img').src = cart[i].salgadoKey.img;
+        salgadoItems.querySelector('.cart-item-name').innerHTML = cart[i].salgadoKey.name;
+        salgadoItems.querySelector('.cart-models-item span').innerHTML = cart[i].salgadoQT+' uni.';
+
+        subtotal += salgadoKey.price * cart[i].salgadoQT;
+
+        s('.subtotal-items div').innerHTML = `R$ ${subtotal}`;
+        s('.cart-items').append(salgadoItems);
+        }
+}

@@ -207,6 +207,8 @@ aside {
 
 .subtotal-items, .promotion-items, .total-items {
     padding: 14px;
+    gap: 20px;
+    display: flex;
 }
 
 .checkout {
