@@ -87,7 +87,6 @@ header {
     height: 40px;
     border-radius: 20px;
     background-color: black;
-    
 }
 
 .models-item--add a {
@@ -179,7 +178,6 @@ header {
     padding: 12px;
     font-size: 16px;
     cursor: pointer;
-
 }
 
 .close--salgado-area {
@@ -236,4 +234,43 @@ aside {
     min-width: 25vw;
 }
 
+.menu-cart-titles {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
+.menu-cart-titles a {
+    text-decoration: none;
+    color: rgb(134, 22, 22);
+    font-weight: bold;
+}
+
+.menu-cart-titles a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width:600px) {
+
+  aside {
+    width: 100vw;
+  }
+
+  .cart-container {
+    margin: 30px;
+    width: 100%;
+  }
+  
+  .subtotal-items, .promotion-items, .total-items {
+    gap: 35px;
+    }
+  
+  body {
+    flex-direction: column;
+  }
+
+}
+
+@media (min-width: 600px) and (max-width: 770px) {
+
+}

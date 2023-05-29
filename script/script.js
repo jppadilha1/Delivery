@@ -39,6 +39,15 @@ function closeWindowArea() {
         s('.salgado--area').style.display = 'none';
 }
 
+function closeCart(e) {
+    e.preventDefault();
+    setTimeout(() => {
+        s('.aside').style.opacity = 0;
+    },200);
+    s('aside').style.display = 'flex';
+
+}
+
 s('#menos').addEventListener('click', (e) => {
     e.preventDefault();
     if(salgadoQT > 1){
@@ -74,9 +83,9 @@ s('.add--salgado-item').addEventListener('click', () => {
 
 function updateCartArea() {
     s('.cart-items').innerHTML = '';
-    let subtotal;
-    let desconto;
-    let total;
+    let subtotal = 0;
+    let desconto = 0;
+    let total = 0;
 
     for(let i in cart){
         let salgadoItems = s('.cart-models-item').cloneNode(true);
@@ -86,7 +95,14 @@ function updateCartArea() {
 
         subtotal += salgadoKey.price * cart[i].salgadoQT;
 
-        s('.subtotal-items div').innerHTML = `R$ ${subtotal}`;
         s('.cart-items').append(salgadoItems);
-        }
+    }
+
+    s('.subtotal-items div').innerHTML = `R$ ${subtotal.toFixed(2)}`;
+    desconto = 0.1 * subtotal;
+    total = subtotal - desconto;
+    s('.promotion-items span').innerHTML = `R$ ${desconto.toFixed(2)}`;
+    s('.total-items div').innerHTML = `R$ ${total.toFixed(2)}`;
+
 }
+console.log(cart)
