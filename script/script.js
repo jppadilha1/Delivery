@@ -27,6 +27,13 @@ salgadosJSON.map((item, index) => {
             s('.salgado--area').style.opacity = 1;
         },200);
 
+        document.addEventListener('scroll', () => {
+            if(window.scrollY >= 493.6000061035156) {
+                s('.menu-openner').style.display = 'flex'
+            } else {
+                s('.menu-openner').style.display = 'none'
+            }
+        })
     });
 
     s('.section--area').append(salgadoItem)
@@ -83,6 +90,7 @@ s('.add--salgado-item').addEventListener('click', () => {
 
 function updateCartArea() {
     s('.cart-items').innerHTML = '';
+    s('.menu-openner span').innerHTML = '';
     let subtotal = 0;
     let desconto = 0;
     let total = 0;
@@ -92,8 +100,10 @@ function updateCartArea() {
         salgadoItems.querySelector('.cart-models-item img').src = cart[i].salgadoKey.img;
         salgadoItems.querySelector('.cart-item-name').innerHTML = cart[i].salgadoKey.name;
         salgadoItems.querySelector('.cart-models-item span').innerHTML = cart[i].salgadoQT+' uni.';
+        let iconQT = s('.menu-openner span');
+        iconQT += cart[i].salgadoQT;
 
-        subtotal += salgadoKey.price * cart[i].salgadoQT;
+        subtotal += cart[i].salgadoKey.price * cart[i].salgadoQT;
 
         s('.cart-items').append(salgadoItems);
     }
@@ -105,4 +115,7 @@ function updateCartArea() {
     s('.total-items div').innerHTML = `R$ ${total.toFixed(2)}`;
 
 }
-console.log(cart)
+
+s('.menu-openner').addEventListener('click', () => {
+    window.scroll(0,0);
+});
