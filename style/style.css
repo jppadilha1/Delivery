@@ -32,11 +32,11 @@ header {
     display: none;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 5px;
     width: 55px;
     height: 40px;
     border-radius: 6px;
-    background-color: #ccc;
+    background-color: #555;
     position: fixed;
     right: 5px;
     bottom: 5px;
@@ -262,6 +262,9 @@ aside {
     width: 100vw;
   }
 
+  header h1 {
+    margin:30px;
+}
   .cart-container {
     margin: 30px;
     width: 100%;
@@ -298,6 +301,10 @@ aside {
     aside {
         width: 60vw;
       }
+    
+    main {
+        width: 100%;
+    }
 
     .salgado--area-window {
         background-color: #ccc;

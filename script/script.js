@@ -90,18 +90,19 @@ s('.add--salgado-item').addEventListener('click', () => {
 
 function updateCartArea() {
     s('.cart-items').innerHTML = '';
-    s('.menu-openner span').innerHTML = '';
     let subtotal = 0;
     let desconto = 0;
     let total = 0;
+    let iconQT = 0;
 
     for(let i in cart){
         let salgadoItems = s('.cart-models-item').cloneNode(true);
         salgadoItems.querySelector('.cart-models-item img').src = cart[i].salgadoKey.img;
         salgadoItems.querySelector('.cart-item-name').innerHTML = cart[i].salgadoKey.name;
         salgadoItems.querySelector('.cart-models-item span').innerHTML = cart[i].salgadoQT+' uni.';
-        let iconQT = s('.menu-openner span');
+
         iconQT += cart[i].salgadoQT;
+        s('.menu-openner span').innerHTML = iconQT;
 
         subtotal += cart[i].salgadoKey.price * cart[i].salgadoQT;
 
