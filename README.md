@@ -6,8 +6,8 @@ Página de delivery de salgadinhos por unidade, na qual o usuário consegue esco
 
 <h2>🚀 Novas Funcionalidades</h2>
 
-- Menu para escolher qual personagem
-- Opção de jogar novamente
-- Vizualização do personagem
+- Ícone do carrinho de compras
+- Versão mobile
+- Desconto de 10% aplicado nas compras
 
 https://jppadilha1.github.io/Delivery/
